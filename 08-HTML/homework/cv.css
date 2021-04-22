@@ -1,0 +1,33 @@
+*{
+    font-family: sans-serif;
+    font-size: large;
+    margin: 20px;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 40px;
+    background-color: cadetblue;
+}
+
+footer{
+    background-color: cadetblue;
+    margin: 20px;
+    padding: 30px;
+    font-weight: bolder;
+
+}
+
+
+p{
+    margin: 55px;
+}
+

@@ -1,0 +1,42 @@
+h1{
+    color: blue;
+}
+
+.imgthidDiv{
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#thirdDiv{
+    height: 600px;
+    width: 500px;
+    display:flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+    align-content:center;
+    padding: 50px;
+    background-color: burlywood;
+    border: coral solid 4px;
+    
+}
+
+
+#spanld{
+    margin: 50px;
+    font-size: 18px;
+}
+
+.background{
+    
+    background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+div{
+    
+    display:inline;
+    justify-content: center;
+    align-content: center;
+    
+}

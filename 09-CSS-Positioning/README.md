@@ -16,11 +16,11 @@
 
 En esta lección cubriremos:
 
-* Introducción al posicionamiento.
-* Propiedad "display".
-* Propiedad "position".
-* Usar "position" para posicionar elementos.
-* Introducción a Flexbox.
+- Introducción al posicionamiento.
+- Propiedad "display".
+- Propiedad "position".
+- Usar "position" para posicionar elementos.
+- Introducción a Flexbox.
 
 <iframe src="https://player.vimeo.com/video/425169846" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
@@ -33,9 +33,9 @@ Armar un layout y hacer que todo se vea limpio es lo que la mayoría de gente es
 Esta propiedad es una de las más importante de posicionamiento en CSS. Podemos usarla para controlar cómo se muestra el contenido en relación a los elementos alrededor de este, y cómo se comportan en la pantalla.
 
 ```css
-  div {
-    display: <valor de la propiedad>;
-  }
+div {
+  display: <valor de la propiedad>;
+}
 ```
 
 Hay dos tipos de elementos "display" ya incluidos en HTML; "block" e "inline",
@@ -51,9 +51,9 @@ Los elementos "inline" son opuestos a los "block", dado que no comenzarán en un
 Podemos controlar cómo un elemento se comporta usando la propiedad "display". Si queremos que un elemento "inline" actúe como uno "block", le definimos:
 
 ```css
-  div {
-    display: block;
-  }
+div {
+  display: block;
+}
 ```
 
 Y vice-versa.
@@ -77,9 +77,9 @@ Esta es una característica de CSS3 que nos permitirá crear sistemas de grillas
 Esta propiedad especificará qué tipo de método de posicionamiento usará un elemento HTML. Hay 5 métodos diferentes disponibles (aquí veremos 4 de ellos).
 
 ```css
-  div {
-    position: <valor de la propiedad>;
-  }
+div {
+  position: <valor de la propiedad>;
+}
 ```
 
 ### static
@@ -107,21 +107,21 @@ Ahora que hemos definido nuestros métodos de posicionamiento al estilo que quer
 Después de haber definido nuestro método de posicionamiento, podemos usar las propiedades "top", "left", "right" y "bottom" para acomodar nuestro elemento. El valor que le des a cada uno determinará qué tan lejos del borde quedará nuestro elemento. Por ejemplo, si queremos que nuestro elemento esté en la esquina superior izquierda (con una posición fija), podemos usar lo siguiente:
 
 ```css
-  div {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+div {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 ```
 
 Si lo quisiésemos 10 píxeles debajo del límite superior y 10 píxeles del borde derecho:
 
 ```css
-  div {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-  }
+div {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
 ```
 
 ## Introducción a Flexbox
@@ -136,30 +136,32 @@ Como mencionamos anteriormente en la sección de la propiedad "display", uno de 
 
 Ahora que nuestro contenedor (elemento) es "flex", podemos imaginarlo como una grilla con columnas que van de izquierdo a derecha y filas que van de arriba a abajo. Podemos usar las propiedades "justify-content" y "align-items" para decirle al contenedor dónde queremos que estén los elementos en la grilla. En principio, "justify-content" aplicará al movimiento de izquierda a derecha (fila), y "align-items" lo hará de arriba a abajo (columna). Tenemos unas reglas que debemos aplicar a cada una de estas reglas:
 
-* `center`: centrará el elemento (o grupo de elementos) a lo largo de un eje en el que aplica esta regla.
-* `flex-start`: Este es el valor por defecto de cada "flex box", mostrará todos los elementos en un grupo al comienzo de una fila o columna.
-* `flex-end`: es lo opuesto a `flex-start`, mostrará los elementos al final de un grupo al comienzo de una fila o columna.
-* `space-between`: Esta regla espaciará uniformemente el elemento o los elementos a lo largo de la fila o columna. El primer elemento estará como `flex-start` y el último como `flex-end`.
-* `space-around`: Similar a `space-between`, pero  aplicará márgenes igualitarios entre cada elemento, por lo que ningún elemento estara directamente sobre el borde del contenedor.
+- `center`: centrará el elemento (o grupo de elementos) a lo largo de un eje en el que aplica esta regla.
+- `flex-start`: Este es el valor por defecto de cada "flex box", mostrará todos los elementos en un grupo al comienzo de una fila o columna.
+- `flex-end`: es lo opuesto a `flex-start`, mostrará los elementos al final de un grupo al comienzo de una fila o columna.
+- `space-between`: Esta regla espaciará uniformemente el elemento o los elementos a lo largo de la fila o columna. El primer elemento estará como `flex-start` y el último como `flex-end`.
+- `space-around`: Similar a `space-between`, pero aplicará márgenes igualitarios entre cada elemento, por lo que ningún elemento estara directamente sobre el borde del contenedor.
 
 Ejemplo: si quisiésemos nuestros elementos centrados en el medio exacto de un "flex box", usaríamos lo siguiente:
 
 ```css
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 ```
 
 ### "flex-direction"
 
 Esta propiedad puede cambiar cómo el navegador interpreta `justify-content` (JC) y `align-items` (AI). El valor por defecto es "row" (fila), y esto funciona en la mayoría de los casos, pero algunas veces queremos cambiar cómo funciona la dirección del contenido.
 
-* `row`: es la dirección por defecto. JC aplica de izquierda a derecha, AI aplica de arriba a abajo.
-+ `column`: Esto invertirá qué propiedad controla qué dirección. JC aplicará de arriba a abajo y AI de izquierda a derecha.
-* `row-reverse`: Sólo invierte la dirección de JC de derecha a izquierda, no afecta a AI.
-* `column-reverse`: Sólo invierte la dirección de AI de abajo a arriba, no afecta a JC.
+- `row`: es la dirección por defecto. JC aplica de izquierda a derecha, AI aplica de arriba a abajo.
+
+* `column`: Esto invertirá qué propiedad controla qué dirección. JC aplicará de arriba a abajo y AI de izquierda a derecha.
+
+- `row-reverse`: Sólo invierte la dirección de JC de derecha a izquierda, no afecta a AI.
+- `column-reverse`: Sólo invierte la dirección de AI de abajo a arriba, no afecta a JC.
 
 ### "align-self"
 
@@ -169,9 +171,9 @@ Por último, cubriremos una propiedad más avanzada llamada "align-self". La mis
 
 ## Recursos adicionales
 
-* [Flexbox Froggy ](http://flexboxfroggy.com/) (un excelente tutorial sobre flexbox)
-* [Conceptos básicos de FlexBox](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox)
-* [CSS tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [MDN: Using CSS Flexible Boxes](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
-* [MDN: CSS display propery](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
-* [MDN: CSS position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+- [Flexbox Froggy ](http://flexboxfroggy.com/) (un excelente tutorial sobre flexbox)
+- [Conceptos básicos de FlexBox](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox)
+- [CSS tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [MDN: Using CSS Flexible Boxes](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+- [MDN: CSS display propery](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+- [MDN: CSS position property](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
